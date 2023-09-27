@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCE3341</title>
+</head>
+<body>
+
+
+    <br><br><br>
+    <center>
+    
+                <table border="1" style="border-collapse: collapse;">
+                    <tr>
+                        <td>
+                <form name="myform">
+                    <table cellpadding="05" >
+                        <tr>
+                            <td>
+                                <label>1st Number :&nbsp;</label><input type="text" name="fst"/>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>2nd Number:&nbsp;</label><input type="text" name="snd"/>
+                            </td>
+                            
+                        </tr>
+                    </table>
+                     
+                     
+                    &nbsp;&nbsp;&nbsp;<input type="button" name="" value="Multiply" onclick="mult()"/>&nbsp;
+                    <input type="button" name="" value="Divide" onclick="divi()"/><br><br>
+                    
+                    
+                    
+                </form>
+                &nbsp;&nbsp;The Result Is : <br>&nbsp;&nbsp;<span id="fnl"></span>
+            </td>
+            </tr>
+            </table>
+
+        </center>
+      
+    
+    
+    
+
+    <script>
+        function mult()
+        {
+            fst = parseInt(myform.fst.value);
+            snd = parseInt(myform.snd.value);
+            result = fst*snd;
+            //myform.result.value=result;
+            document.getElementById("fnl").innerHTML = result;
+        }
+        function divi()
+        {
+            fst = parseInt(myform.fst.value);
+            snd = parseInt(myform.snd.value);
+            result = fst/snd;
+            //myform.result.value=result;
+            document.getElementById("fnl").innerHTML = result;
+            
+        }
+    </script>
+
+
+
+</body>
+</html>

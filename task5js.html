@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCE3341</title>
+
+    <style>
+        .box{
+            border: 3px solid;
+        }
+
+        .messa{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <br><br><br><br>
+    <center>
+
+        <form>
+            <table border="0" cellspacing="9" cellpadding="04">
+                <tr>
+                    <td style="text-align: right;">
+                        <label>Name:</label>
+                    </td>
+                    <td>
+                        <input class="box" style="border-color: red;" type="text" id="ne"/>&emsp;<span class="messa" id="1mess"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <label>Email:</label>
+                    </td>
+                    <td>
+                        <input class="box" style="border-color: red;" type="text" id="el"/>&emsp;<span class="messa" id="2mess"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <label>Website:</label>
+                    </td>
+                    <td>
+                        <input class="box" style="border-color: red;" type="text" id="we"/>&emsp;<span class="messa" id="3mess"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: right;">
+                        <label>Message:</label>
+                    </td>
+                    <td rowspan="4">
+<!--vertical-align EZ TUTORIALS youtube--><textarea class="box" style="border-color: red; vertical-align: top;" rows="4" cols="24" id="me"></textarea>&emsp;<span class="messa" id="4mess"></span>
+                    </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>
+                <tr><td></td></tr>   
+                <tr>            
+                    <td></td>
+                    <td>
+                        <input type="button"  value="Submit" onclick="lokesh()"/><br>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        
+    </center>
+
+    <script>
+
+        function lokesh()
+        {
+            var a = document.getElementById("ne").value;
+
+            var email = document.getElementById("el").value;//itechnica email validation youtube
+            var atpos = email.indexOf("@");//itechnica email validation youtube
+            var dotpos = email.lastIndexOf(".");//itechnica email validation youtube
+            
+            
+            var c = document.getElementById("we").value;
+            var onedotpos = c.indexOf(".");
+            var twodotpos = c.lastIndexOf(".");
+
+            var d = document.getElementById("me").value;//GreatStack form validation youtube
+            var dreq = 1;//GreatStack form validation youtube
+            var dleft = dreq - d.length;//GreatStack form validation youtube
+
+            if(a==""){
+                document.getElementById("1mess").innerHTML = "This field is required";
+                var one = 2;
+                
+            }
+
+            if(atpos<1){
+                document.getElementById("2mess").innerHTML = "A valid email address is required";
+                var two = 2;
+                
+            }
+            else if(dotpos<atpos+2){
+                document.getElementById("2mess").innerHTML = "A valid email address is required";
+                var two = 2;
+                
+            }
+            else if(dotpos+2>=email.length){
+                document.getElementById("2mess").innerHTML = "A valid email address is required";
+                var two = 2;
+                
+            }
+
+            if(dleft>0){
+                document.getElementById("4mess").innerHTML = "This field is required";
+                var four = 2;
+                
+            }
+
+            if(onedotpos + 1 == twodotpos){
+                document.getElementById("3mess").innerHTML = "A valid url is required";
+                var three = 2;
+            }
+
+            if(c.length == 0){
+                document.getElementById("3mess").innerHTML = "A valid url is required";
+                var three = 2;
+            }
+
+            if(one == 2 || two == 2|| three == 2||four == 2)
+            {
+                return false;
+            }
+
+                   
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>

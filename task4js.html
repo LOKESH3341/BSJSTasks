@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCE3341</title>
+</head>
+<body>
+    
+
+    <br><br><br><br>
+    <center>
+    <table border="1" cellpadding="10" style="border-collapse: collapse;">
+        <tr>
+            <td>
+                <form>
+
+                    <input type="button" name="" value="show date" onclick="disdate()"/><br>
+                    <span id="1one"></span><br><br>
+            
+                    <input type="button" name="" value="show Time" onclick="distime()"/><br>
+                    <span id="2two"></span>
+            
+                </form>
+            </td>
+        </tr>
+    
+
+    </table>
+</center>
+
+    <script>
+
+        const d = new Date();
+        var arr1 = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+        
+
+        function disdate()
+        {
+            dnum = d.getDate();
+            mtxt = d.getMonth();
+            ynum = d.getFullYear();
+            document.getElementById("1one").innerHTML = dnum+"/"+arr1[mtxt]+"/"+ynum;
+            console.log("DATE -  "+dnum);
+            console.log(arr1[mtxt]);
+            console.log("YEAR - "+ynum);
+            
+        }
+
+        function distime()
+        {
+            document.getElementById("2two").innerHTML = Date();
+        }
+
+             
+    </script>
+    
+</body>
+</html>

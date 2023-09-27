@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21BCE3341</title>
+    
+
+    <style>
+        .c1{
+            text-align: left;
+        }
+
+        .c2{
+            text-align: right;
+        }
+
+        h2{
+            color: blue;
+                       
+        }
+
+        .bg-custom{
+            background-image: linear-gradient(180deg,yellow ,pink 500px);
+        }
+
+    </style>
+
+</head>
+<body>
+    <main>
+        <center>
+            <br><br>
+    <form class="bg-custom" style="max-width: 44%;">
+        
+            
+            
+            <table border="0" cellpadding="5" >
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <h2>Registration form</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <th style="text-align: right;">
+                        <label >First Name</label>
+                    </th>
+                    <th>
+                        <input type = "text" id="fname" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label >Last Name</label>
+                    </th>
+                    <th>
+                        <input type = "text" id="lname" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label >email</label>
+                    </th>
+                    <th>
+                        <input type = "email" id="email" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Password</label>
+                    </th>
+                    <th>
+                        <input type="Password" id="password" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Re-enter Password</label>
+                    </th>
+                    <th>
+                        <input type="Password" id="rpassword" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th rowspan = "2" style="text-align: right;">
+                        <label>Gender</label>
+                    </th>
+                    <td class = "c1">
+                        <input type="radio" name = "gender" />Male
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class = "c1" >
+                        <input type="radio" name = "gender"/>Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Age</label>
+                    </th>
+                    <th>
+                        <input type="tel" maxlength="3" id="age" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Phone Number</label>
+                    </th>
+                    <th>
+                        <input type="tel"  maxlength="10" id="pnumber" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label >Address</label>
+                    </th>
+                    <th>
+                        <textarea cols="57" rows="7" id="address" required></textarea>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label >State</label>
+                    </th>
+                    <th>
+                        <input type = "text" id="state" size = 60 required/>
+                    </th>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Country</label>
+                    </th>
+                    <td>
+                        <select required>
+                       
+                            <option>Choose your country</option>
+                            <option>India</option>
+                            <option>Other</option>
+
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th style="text-align: right;">
+                        <label>Languages known</label>
+                    </th>
+                    <td>
+                        <input type = "checkbox" />English&nbsp;
+                        <input type = "checkbox" />Kannada&nbsp;
+                        <input type = "checkbox" />Hindi&nbsp;
+                        <input type = "checkbox" />Telugu&nbsp;
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                    <input type = "checkbox" />Hereby I declare all the given details are true 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan = "2" class = "c2">
+                        Login to <a href = "https://ethnus.com/">Ethnus</a> website
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        
+                        <button onclick="lokesh()" style="background-color: red;color: white;height: 25px;width: 90px;border-radius: 500px;border: 2px solid black"><u>Register</u></button>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+        </form>
+    </center>
+    <br><br><br>
+</main>
+
+
+        <script>
+
+            function lokesh()
+            {
+                var fname = document.getElementById("fname").value;
+                var lname = document.getElementById("lname").value;
+                var email = document.getElementById("email").value;
+                var password = document.getElementById("password").value;
+                var rpassword = document.getElementById("rpassword").value;
+                var age = document.getElementById("age").value;
+                var pnumber = document.getElementById("pnumber").value;
+                var address = document.getElementById("address").value;
+                var state = document.getElementById("state").value;
+
+                if(password == rpassword){
+                    return false;
+                }
+
+            }
+
+
+        </script>
+
+</body>
+</html>
